@@ -1,0 +1,32 @@
+KEY FINDINGS FROM MLB STATCAST ANALYSIS (2015-2024)
+==================================================
+
+1. Most Predictive Metrics for Run Production:
+   - BB: r = 0.890
+   - HR: r = 0.875
+   - AVG: r = 0.402
+   - SLG: r = 0.374
+   - OBP: r = 0.324
+
+2. Best Regression Model:
+   - Type: Traditional
+   - R-squared: 0.955
+   - Adjusted R-squared: 0.955
+   - Key predictors: AVG, OBP, SLG, HR, BB
+
+3. Evolution of the Game (2015-2024):
+   - AVG: -4.4% change
+   - OBP: -1.5% change
+   - SLG: -1.4% change
+   - HR: +11.1% change
+   - BB: +6.1% change
+
+4. Most Effective Team Strategy:
+   - High-High approach produced the most runs on average
+   - Example: ATL (2023) with 947 runs
+
+5. Recommendations for Building Offensive Strategy:
+   Based on regression analysis, teams should prioritize:
+   - AVG: Most significant predictor in Traditional model
+   - EV: Most significant predictor in Statcast model
+   - AVG: Most significant predictor in Combined model
