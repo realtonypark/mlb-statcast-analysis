@@ -1,6 +1,7 @@
 ## What Makes the 'Dream Team' in MLB - Identifying Key Batting Metrics that Drive Offensive Production in the Statcast Era (2015-2024)
 [Read Paper](https://realtonypark.github.io/2025/04/17/what-makes-dream-team-mlb/)
 
+<br>
 <b>Abstract</b>
 
 This study examines the relationship between various batting metrics and team run production throughout the Statcast era (2015-2024). The analysis of team-level offensive statistics for all 30 MLB teams reveals that traditional metrics—particularly walks (BB) and home runs (HR)—maintain the strongest correlations with run production, while advanced Statcast metrics show weaker relationships than initially hypothesized. Regression analysis demonstrates that traditional statistical models outperform Statcast-based models in predicting team run totals. These findings suggest that front offices should maintain a multidimensional approach to offensive evaluation rather than overemphasizing either traditional counting stats or advanced physical metrics in isolation.
