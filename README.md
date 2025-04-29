@@ -1,5 +1,5 @@
 ## What Makes the 'Dream Team' in the MLB - Identifying Key Batting Metrics that Drive Offensive Production in the Statcast Era (2015-2024)
-[Read Paper](https://realtonypark.github.io/2025/04/17/what-makes-dream-team-mlb/)
+[Read Paper](https://realtonypark.github.io/2025/04/29/what-makes-dream-team-mlb/)
 
 <br>
 
@@ -38,26 +38,26 @@ The comprehensive baseball dataset used in this study provides a foundation for 
 
 To analyze the relationship between batting metrics and run production, I took a three-step approach. This methodological approach builds upon the analytical frameworks established by Albert (2016) and Wulff and De Silva (2022) while extending their application to team-level analysis across the Statcast era. This method addresses a gap in the literature where individual player metrics have been more thoroughly studied than team-level offensive production. First, I calculated Pearson correlation coefficients between each metric and team runs scored to identify the strength and direction of these relationships. As shown in Figure 1, these correlations varied considerably across metrics, with traditional statistics generally showing stronger relationships with run production than Statcast metrics.
 
-![Relationship Between Batting Metrics and Run Production - All Years](/assets/posts/Image2.jpg)
+![Relationship Between Batting Metrics and Run Production - All Years](/figures/run_scatter_plots_all_years.png)
 *Figure 1: Relationship Between Batting Metrics and Run Production - All Years*
 
 The correlation scatter plots reveal that walks (BB, r = 0.890) and home runs (HR, r = 0.875) have the strongest linear relationships with total runs scored, while batting average (AVG, r = 0.402), slugging percentage (SLG, r = 0.374), and on-base percentage (OBP, r = 0.324) show moderate correlations. In contrast, Statcast metrics demonstrate notably weaker relationships: exit velocity (EV, r = 0.216), hard-hit percentage (HardHit%, r = 0.095), barrel percentage (Barrel%, r = 0.039), and launch angle (LA, r = 0.070) all show minimal correlation with run production. These results clearly indicate that despite the technological sophistication of Statcast measurements, traditional outcome-based statistics remain more directly tied to offensive production.
 
 The second stage of analysis was developing multiple regression models to identify which combination of metrics best predicts team run totals. Three distinct models were created: one using only traditional metrics, one using only Statcast metrics, and a combined model. Figure 2 illustrates the evolution of model performance across the Statcast era. It shows that the traditional metrics model consistently outperformed the other approaches throughout the study period.
 
-![Model Performance Evolution (2015-2024)](/assets/posts/Image1.jpg)
+![Model Performance Evolution (2015-2024)](/figures/model_performance_evolution.png)
 *Figure 2: Model Performance Evolution (2015-2024)*
 
 The traditional model achieved an exceptionally high R-squared value of 0.955 (which means traditional metrics model explains 95.5% of the variance in team run production). Within this model, batting average was the most significant predictor with a coefficient of 5972.642 (p < 0.001), though interestingly, OBP showed a negative coefficient of -2486.658 (p < 0.001), and SLG also had a negative coefficient of -866.524 (p = 0.002). These counterintuitive coefficients likely result from multicollinearity issues, as shown in Figure 3, where strong correlations exist between AVG and OBP (r = 0.74), AVG and SLG (r = 0.71), and OBP and SLG (r = 0.81).
 
-![Correlation Between Batting Metrics - All Years](/assets/posts/Image4.jpg)
+![Correlation Between Batting Metrics - All Years](/figures/correlation_heatmap_all_years.png)
 *Figure 3: Correlation Between Batting Metrics - All Years*
 
 The Statcast model showed an R-squared value of just 0.091, which means this model have significantly lower explanatory power. Within this model, exit velocity was the only significant predictor (coefficient = 99.840, p < 0.001). This suggests that the quality of contact measured by Statcast provides some information about offensive potential, but it captures a relatively small portion of what drives run production. The combined model showed performance intermediate between the traditional and Statcast models, though much closer to the traditional model's effectiveness. This indicates that Statcast metrics do not represent a huge breakthrough in predicting offensive production at the team level but only provide additional information beyond traditional statistics.
 
 The longitudinal analysis of these relationships, shown in Figure 4, demonstrates trends in how various metrics correlate with run production over time. The figure shows that the relative importance of different metrics fluctuated somewhat from year to year. These fluctuations likely reflect changing strategic approaches across the league and rule modifications during this period. However, traditional statistics, particularly BB, HR, and the traditional slash line statistics (AVG, OBP, SLG), consistently outperformed Statcast metrics throughout the entire study period.
 
-![Correlation with Run Production Over Time](/assets/posts/Image3.jpg)
+![Correlation with Run Production Over Time](/figures/run_correlation_by_year.png)
 *Figure 4: Correlation with Run Production Over Time*
 
 One notable trend is the negative correlation between strikeout rate (K_rate) and run production. Indeed, the negative correlation strengthened over time (reaching approximately r = -0.4 by 2024). This indicates the growing cost of strikeouts in the modern game. Another interesting observation is the relative stability of most correlations despite some rule changes during this period, such as the introduction of the universal designated hitter, pitch clock, and restrictions on defensive shifts. This stability suggests that the fundamental relationships between batting outcomes and run production remain consistent even as the strategic environment of the game evolves.
